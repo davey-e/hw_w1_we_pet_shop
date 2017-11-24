@@ -40,3 +40,19 @@ def find_pet_by_name(pet_shop, pet_to_find)
   end
   return nil
 end
+#Got this one working eventually but took a while to figure
+#out how to get it to return nil in the right place!
+
+def remove_pet_by_name(pet_shop, pet_to_remove)
+  index = 0
+  for pet in pet_shop[:pets]
+    if pet[:name] == pet_to_remove
+      pet_index = index
+    end
+    index += 1
+  end
+  pet_shop[:pets].delete_at(pet_index)
+end
+#^This one works, but it seems like there should be an
+#easier way to find the correct pet to delete?!
+#Ask about this one in the homework review

@@ -56,3 +56,11 @@ end
 #^This one works, but it seems like there should be an
 #easier way to find the correct pet to delete?!
 #Ask about this one in the homework review
+
+def add_pet_to_stock(pet_shop, new_pet)
+  pet_shop[:pets].push(new_pet)
+end
+
+def customer_pet_count(customer)
+  return customer[:pets].count
+end
